@@ -14,6 +14,9 @@ console.log("is touched", touched);
 
   return (
     <div className="user-form">
+        <div className="user-photo">
+        
+        </div>
       
     <Form>
         
@@ -24,7 +27,6 @@ console.log("is touched", touched);
           <option value="Female">Female</option>
           <option value="Male">Male</option>
           <option value="Other">Other</option>
-
         </Field>
 
     {/*  DOBIRTH */}
