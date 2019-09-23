@@ -1,3 +1,8 @@
+
+header {
+    font-family: 'Roboto', sans-serif;
+}
+
 nav {
     display: flex;
     justify-content: flex-end;
@@ -32,11 +37,20 @@ a:hover {
     transition: 1.0s;
 }
 
+body {
+    background-image: linear-gradient(#0085FF, #0085FF, #8AC7FF, white);
+    font-family: 'Roboto', sans-serif;
+}
+
+.MainCards {
+    display: flex;
+    justify-content: center;
+}
+
 .WhatIs {
-    border: 2px solid red;
-    width: 45%;
+    width: 35%;
     margin-top: 5%;
-    margin-left: 27%;
+    /* margin-left: 27%; */
 }
 
 .WhatIs h1 {
@@ -50,14 +64,13 @@ a:hover {
 }
 
 .WhatIs .friends1 {
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 .Mission {
-    border: 2px solid green;
-    width: 45%;
+    width: 35%;
     margin-top: 5%;
-    margin-left: 27%;
+    margin-left: 10%;
 }
 
 .Mission h1 {
@@ -68,4 +81,8 @@ a:hover {
 .Mission p {
     font-size: 1.5rem;  
     text-align: center;
+}
+
+.Mission .friends2 {
+    margin-left: 12%;
 }
