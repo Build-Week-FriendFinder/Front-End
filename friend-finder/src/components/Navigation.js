@@ -3,41 +3,24 @@ import React from 'react'
 import { Dropdown } from 'semantic-ui-react'
 import { NavLink } from "react-router-dom";
 
+// import './Navigation.css';
 
 // TODO: This is missing functionality for sub-menu here from SUI core examples.
 // The "Publish To Web" item should contain a sub-menu.
 
-const Navigation = () => (
-
-    // <nav>
-    //     <NavLink className="navlink" to="/">Home</NavLink>
-    // </nav>
-    
+const Navigation = () => {
 
 
+return (
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+<nav className="NavBanner">
 
-,
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+<NavLink className="navlink" to="/">Home</NavLink>
+<NavLink className="navlink" to="/friends">Friends</NavLink>
+<NavLink className="navlink" to="/messages">Messages</NavLink>
+<NavLink className="navlink" to="/logout">Log Out</NavLink>
 
-
-
-
-
+</nav>
 
 //   <Dropdown text='Menu'>
 //     <Dropdown.Menu>
@@ -54,5 +37,5 @@ window.onclick = function(event) {
 
   
 )
-
+}
 export default Navigation;
