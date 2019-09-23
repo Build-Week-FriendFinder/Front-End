@@ -1,0 +1,10 @@
+.user-profile {
+    padding:50px;
+    margin:0 auto;
+}
+
+.user-form {
+    display:flex;
+    justify-content: space-between;
+
+}
