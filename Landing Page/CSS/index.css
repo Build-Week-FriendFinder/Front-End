@@ -1,0 +1,71 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background: #0085FF;
+    align-content: center;
+    height: 65px;
+}
+
+nav a {
+    padding: 1% 2.5%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    color: #0085FF;
+    text-decoration: none;
+    border-radius: 8px;
+    height: 17px;
+}
+
+nav h1 {
+    padding-right: 12%;
+    font-size: 50px;
+    color: white;
+    /* border: 2PX SOLID RED; */
+    margin-top: 5px;
+}
+
+a:hover {
+    background: #0085FF;
+    color: white;
+    transition: 1.0s;
+}
+
+.WhatIs {
+    border: 2px solid red;
+    width: 45%;
+    margin-top: 5%;
+    margin-left: 27%;
+}
+
+.WhatIs h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.WhatIs p {
+    font-size: 1.5rem;  
+    text-align: center;
+}
+
+.WhatIs .friends1 {
+    margin-left: 20%;
+}
+
+.Mission {
+    border: 2px solid green;
+    width: 45%;
+    margin-top: 5%;
+    margin-left: 27%;
+}
+
+.Mission h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.Mission p {
+    font-size: 1.5rem;  
+    text-align: center;
+}
