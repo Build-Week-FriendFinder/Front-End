@@ -1,19 +1,24 @@
-import React from 'react';
-import Navigation from "./components/Navigation.js";
+import React, {useState, useEffect} from 'react';
+import UserContext from './contexts/UserContext.js';
+import { Route } from "react-router-dom";
+import PrivateRoute from './components/PrivateRoute.js';
+import { axiosWithAuth } from './utils/axiosWithAuth';
 
 // CSS
 import './App.css';
 import './Navigation.css';
 
-
+// Kelly Components
 import Signup from './components/Signup.js';
-import Home from './components/home/Home.js';
 import Survey from './components/Survey.js';
-import { Route } from "react-router-dom";
 
+// Ben Components
+import Home from './components/home/Home.js';
+import Navigation from "./components/Navigation.js";
 
 
 function App() {
+  
 
   return (
     <div className="App">

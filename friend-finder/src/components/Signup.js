@@ -1,7 +1,7 @@
 // Kelly Code
 
 import React, {useState, useEffect, useContext} from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import ReactDOM from 'react-dom';
 
 
@@ -36,15 +36,15 @@ const Signup = () => {
 
     const handleSubmit = e => {
 		e.preventDefault();
-		// axios
-		// 	.post('', newUser)
-		// 	.then(res => {
-		// 		console.log(res);
-		// 		localStorage.setItem('token', res.data.token);
-		// 		const id = res.data.id;
+		axios
+			.post('', newUser)
+			.then(res => {
+				console.log(res);
+				localStorage.setItem('token', res.data.token);
+				const id = res.data.id;
 				
-		// 	})
-		// 	.catch(err => console.log('error in signup', err));
+			})
+			.catch(err => console.log('error in signup', err));
 	};
 
 	// useEffect(
