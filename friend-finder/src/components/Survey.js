@@ -10,8 +10,7 @@ const Survey = () => {
 
 
     const [ newSurvey, setNewSurvey ] = useState({		
-        gender: '',
-        age: '',
+        gender: '',        
         hobbies: '',
         bio: ''
 	
@@ -53,13 +52,7 @@ const Survey = () => {
                     <option value="gender">Male</option>
                     <option value="gender">Female</option>
                     <option value="gender">Other</option>
-            </select> 
-
-                <input  type="number"
-                        name="age"
-                        placeholder="Age"
-                        onChange={handleChange}
-                        value={newSurvey.age} />
+            </select>              
 
                 
                 <input  type= "text"

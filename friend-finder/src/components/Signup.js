@@ -3,6 +3,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
+import DatePicker from "react-datepicker";
 
 
 
@@ -56,9 +57,11 @@ const Signup = () => {
     
 
     
-
+    const [startDate, setStartDate] = useState(new Date());
 
     return (
+
+        
         <>
         
 
@@ -85,6 +88,10 @@ const Signup = () => {
                         onChange={handleChange}
                         value={newUser.password}
                          />
+                         
+                <label>Date of Birth</label><br/>
+                <br/>
+                <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
 
               
 

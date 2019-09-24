@@ -21,20 +21,21 @@ function App() {
   
 
   return (
-    <div className="App">
-      
-      <Navigation/>
-      
-  <Route exact path="/" component={Home}/> 
-  <Route exact path="/signup" component={Signup} />
-  <Route exact path="/survey" component={Survey} />
 
-      
+  <UserContext.Provider>
 
-      
-      
- 
-    </div>
+      <div className="App">
+        
+        <Navigation/>
+        
+          <Route exact path="/" component={Home}/> 
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/survey" component={Survey} />     
+        
+  
+      </div>
+
+    </UserContext.Provider>
   );
 }
 
