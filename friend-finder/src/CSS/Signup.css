@@ -1,1 +1,15 @@
 /* Kelly code */
+
+
+form {
+    margin-top: 115px;
+	border: 2px solid #e3e1e1;
+	border-radius: 5px;
+	box-shadow: 5px 5px 8px #bfbfbf;
+	width: 400px;
+	align-items: center;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	background: #3d4d41;
+}
