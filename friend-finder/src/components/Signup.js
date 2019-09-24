@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 
 
 
+
 // components
 import '../CSS/Signup.css';
 import UserContext from '../contexts/UserContext.js';
@@ -21,7 +22,8 @@ const Signup = () => {
     const [ newUser, setNewUser ] = useState({		
 		name: '',
 		email: '',
-		password: '',
+        password: '',
+        bday: ''
 	
 	});
 
@@ -61,6 +63,8 @@ const Signup = () => {
         
 
             <form onSubmit={handleSubmit}>
+
+                
                 <input  type="text"
                         name="name"
                         placeholder="Name"
@@ -77,12 +81,15 @@ const Signup = () => {
 
                 <input  type="password"
                         name="password"
-                        placeholder="PassWord"
+                        placeholder="Password"
                         onChange={handleChange}
                         value={newUser.password}
                          />
 
-                 <button type="submit">Submit</button>               
+              
+
+                 <button type="submit">Submit</button> 
+
             </form>
         </>
     )
