@@ -1,16 +1,14 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-import Signup from './Signup';
+const Login = ({ history }) => {
+  const submitLogin = () => {
+    history.push('/');
+  }
 
-const submitLogin = (e) => {
-  e.preventDefault();
-  history.push('/home');
-}
-
-const Login = () => {
   return (
     <button onClick={submitLogin}>Login</button>
   );
 }
 
-export default Login;
+export default withRouter(Login);
