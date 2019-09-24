@@ -13,7 +13,9 @@ const Navigation = () => {
 
 return (
 
-<nav className="NavBanner">
+<div className="NavBanner">
+
+<nav className="NavItems">
 
 <NavLink className="navlink" to="/">Home</NavLink>
 <NavLink className="navlink" to="/friends">Friends</NavLink>
@@ -21,6 +23,8 @@ return (
 <NavLink className="navlink" to="/logout">Log Out</NavLink>
 
 </nav>
+
+</div>
 
 //   <Dropdown text='Menu'>
 //     <Dropdown.Menu>

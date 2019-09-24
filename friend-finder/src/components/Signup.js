@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 
 
 // components
-import Navigation from './Navigation.js';
+import '../CSS/Signup.css';
 import UserContext from '../contexts/UserContext.js';
 
 
@@ -58,7 +58,7 @@ const Signup = () => {
 
     return (
         <>
-        <Navigation />
+        
 
             <form onSubmit={handleSubmit}>
                 <input  type="text"
