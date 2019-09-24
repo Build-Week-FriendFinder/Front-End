@@ -3,8 +3,9 @@
 
 .Message-Container{
   display: flex;
+  justify-content: center;
   width: 90%;
-  /* border: 2px solid black; */
+ 
 }
 
 
@@ -31,22 +32,27 @@
   }
 
   .MessageBox{
-/* border: 2px solid red; */
-width: 500px;
+    display: flex;
+    border: 2px solid green; 
+    width: 500px;
   }
 
 
 /* INPUT FIELD and btn container */
    .Inputcontainer{
-    display: Flex;
-    justify-content: space-around;
-    /* flex-direction: column; */
-    border: 2px solid black;
+    display: flex;
+    border: 2px solid red;
     width: 320px; 
+    height: 200px;
   } 
 
+
+
   /* BUTTON */
+
+
   .Btn{
+    
     padding: 5px 10px 5px 10px;
     margin: 25px 15px 0 15px; 
     border-radius: 5px;
@@ -59,6 +65,7 @@ width: 500px;
     
     
   }
+
 
   /* Friend selected Image for message*/
   .MessageUserImg{

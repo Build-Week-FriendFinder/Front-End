@@ -9,24 +9,31 @@
 
 /* Contains header text and buttons */
 .HeaderBanner{
-  margin: 0 0 0 5%;
+  margin: 0 5% 0 5%;
   display: flex;
-  /* flex-wrap: wrap;  */
+  justify-content: center;
+  border: 2px solid black;
   
 }
 
+/* LEFT - Text Header */
 .Title{
+  display: flex;
+  justify-content: flex-start;
   padding: 5px 0 0 0; 
   color: white;
+  border: 2px solid red;
 }
 
 
 
 
-/* group of nav buttons */
+/* RIGHT - group of nav buttons */
 .NavItems{
-  margin: 0 0 0 15%;
+  
+  /* margin: 0 0 0 5%; */
  padding: 35px 0 0 0; 
+ border: 2px solid red;
 }
 
 

@@ -56,21 +56,26 @@ console.log("is touched", touched);
 
     <div className="Inputcontainer">
 
-        <h4>Send Message:</h4>
+      
 
-        <Form>
-            
-            <Field type="text" name="Message" placeholder="Enter Message" />
-            {/* {touched.music && errors.music && (
-            <p className="error">{errors.music}</p> */}
+       <h4>Send Message:</h4>
 
-        </Form>
+    <Form>
+    
+        <Field type="text" name="Message" placeholder="Enter Message" />
+        {/* {touched.music && errors.music && (
+        <p className="error">{errors.music}</p> */}
 
-    </div>
-   
-    <button type="submit" className="Btn">Send Message</button>  
+    </Form>
 
+       
+      
+       
 
+        </div>
+
+        <button type="submit" className="Btn">Send Message</button> 
+        
         </div>
 
         </div>
