@@ -2,11 +2,11 @@ import React from 'react';
 
 
 function FoundFriend({ profile, name, gender, age, location, interests }) {
-  request = () => {
+  const request = () => {
     // request as friend
   }
 
-  next = () => {
+  const next = () => {
     // next profile
   }
 
