@@ -216,3 +216,39 @@ body {
         color: #0085FF;
     }
 }
+
+@media screen and (max-width: 500px) {
+    
+    header {
+        margin-left: 5%;
+    }
+
+    .SignUp {
+        width: 35%;
+        margin-left: 32%;
+    }
+
+    .SignUp h1 {
+        font-size: 1rem;
+    }
+
+    footer nav {
+        flex-direction: column;
+        height: 100%;
+        width: 25%;
+        margin-left: 10%;
+        margin-bottom: 0px;
+    }
+
+    footer nav a {
+        text-align: center;
+        width: 35%;
+        margin-left: 28%;
+    }
+
+    header nav h1 {
+        font-size: 1.5rem;
+        padding-left: 20%;
+    }
+
+}
