@@ -45,22 +45,13 @@ return (
 <div className="HeaderBanner">
 
 <div className="Title">
-<h1 id='h'>{headerText}</h1>
 
-{/* <h1 id='f' >FRIENDS</h1>
-<h1 id='m' >MESSAGES</h1>
-<h1 id='l' >LOG OUT</h1>  */}
+<h1>{headerText}</h1>
 
 </div>
 
-
 <nav className="NavItems">
-{/* onClick={HomeHeader} */}
-
-{/* <NavLink to="/" onClick={(e) => ChangeText("Friends")} >Profile</NavLink> */}
-
-{/* onClick={(e) => ChangeText("Friends")} */}
-
+    
 <NavLink onClick={TextHome} className="navlink" exact activeClassName="activeLink" to="/">Home</NavLink>
 <NavLink onClick={TextFriends} className="navlink" exact activeClassName="activeLink" to="/friends">Friends</NavLink>
 <NavLink onClick={TextMessages} className="navlink" exact activeClassName="activeLink" to="/messages">Messages</NavLink>

@@ -21,60 +21,64 @@ console.log("is touched", touched);
 
     <div className="Message-Container">
 
+        <div className="friend-List-container">
+            <h2>FRIENDS</h2>
 
-    {/* <h1>MESSAGES</h1>    */}
-   
+            <div className="friend-List">
+            <h4>list of friends</h4>
+            <h4>list of friends</h4>
+            <div className="imageholder">
+            <img src="image"></img>
+            </div>
+            
+            <div className="imageholder">
+            <img src="image"></img>
+            </div>
 
-        <div className="friend-photo">
+            </div>
+
         
+
         </div>
-
-    <div className="friend-List-container">
-        <h2>FRIENDS</h2>
-
-        <div className="friend-List">
-        
-        <img src="image"></img>
-
-        <img src="image"></img>
-
-        <img src="image"></img>
-
-        </div>
-
-        
-
-    </div>
 
    
-   <div className="MessageBox">
+        <div className="MessageBox">
        
-    <div className="MessageUserImg">
-        <h6>Profile Image</h6>
-    </div>
+        <div className="MessageBoxTop">
+        
+        <div className="MessageUserImg">
+            <img src="image"></img>
+        </div>
     
 
-    <div className="Inputcontainer">
-
-      
-
-       <h4>Send Message:</h4>
-
-    <Form>
     
-        <Field type="text" name="Message" placeholder="Enter Message" />
-        {/* {touched.music && errors.music && (
-        <p className="error">{errors.music}</p> */}
 
-    </Form>
+  
+    <div className="Messagebox2">
+ 
 
-       
-      
-       
+        <Form>
+
+            Send Message: 
+            <Field type="text" name="message" placeholder="Enter Message" />
+            {touched.message && errors.message && (
+            <p className="error">{errors.message}</p>
+            )}
+
+        </Form>
+        
+            <div>
+
+            {/* <li>{message}</li> */}
+
+            </div>
 
         </div>
 
-        <button type="submit" className="Btn">Send Message</button> 
+    </div>   
+          
+            <button type="submit" className="Btn">Send Message</button> 
+             
         
         </div>
 
@@ -86,18 +90,12 @@ console.log("is touched", touched);
     }
         const FormikMessageForm = withFormik({
 
-            mapPropsToValues({gender, date, location, movie, book, music}){
+            mapPropsToValues({message}){
 
-            
                 return {
-                  
-                  
-                  date: date || "",
-                  location: location || "",
-                  movie: movie || "",
-                  book: book || "",
-                  music: music || ""
-
+                
+                  message: message || ""
+               
                 };
               },
 
