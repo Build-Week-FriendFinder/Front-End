@@ -1,9 +1,9 @@
 // Ben Solt
 import React, { useState, useEffect } from "react";
 import { Form, Field, withFormik } from "formik";
-// import * as Yup from "yup";
-
-import { NavLink } from "react-router-dom";
+import * as Yup from "yup";
+import axios from "axios";
+// import { NavLink } from "react-router-dom";
 
 
 
@@ -16,6 +16,9 @@ console.log("is touched", touched);
     }
   }, [status]);
 
+ 
+
+
   return (
 
 
@@ -25,8 +28,10 @@ console.log("is touched", touched);
             <h2>FRIENDS</h2>
 
             <div className="friend-List">
-            <h4>list of friends</h4>
-            <h4>list of friends</h4>
+            <h4>friend 1</h4>
+            <h4>friend 2</h4>
+            <h4>friend 3</h4>
+            <h4>friend 4</h4>
             <div className="imageholder">
             <img src="image"></img>
             </div>
@@ -45,40 +50,58 @@ console.log("is touched", touched);
         <div className="MessageBox">
        
         <div className="MessageBoxTop">
-        
-        <div className="MessageUserImg">
-            <img src="image"></img>
-        </div>
-    
+          
+          <div className="ProfileBox">
+            
+            <div className="UserImg">
 
-    
+              <img src="image"></img>
+
+            </div>
+
+              <h4>User Name</h4>
+
+              <button type="submit" className="Btn2">Remove Friend</button> 
+
+          </div>
+        
+         
 
   
-    <div className="Messagebox2">
+    <div className="formholder">
  
 
         <Form>
 
             Send Message: 
             <Field type="text" name="message" placeholder="Enter Message" />
-            {touched.message && errors.message && (
+            {/* {touched.message && errors.message && (
             <p className="error">{errors.message}</p>
-            )}
+            )} */}
 
         </Form>
-        
+
+        {/* USER MESSAGE DISPLAYED ON SCREEN */}
             <div>
 
-            {/* <li>{message}</li> */}
+              {user.map(person => (
 
+                <li>{person.message}</li>
+
+              ))}
+             
             </div>
 
-        </div>
+        </div> 
+        {/* END Formholder*/}
 
     </div>   
           
-            <button type="submit" className="Btn">Send Message</button> 
+          <div className="btn-holder">
+          <button type="submit" className="Btn">Send Message</button> 
              
+          </div>
+            
         
         </div>
 
@@ -98,13 +121,22 @@ console.log("is touched", touched);
                
                 };
               },
+        
 
-           
+        // validationSchema: Yup.object().shape({
+        // message: Yup.string().required("You silly!!!"),
+        // }),
 
 
-        })
+        handleSubmit(user, { setUser}) {
+            axios
+              .post("", user)
+              .then(res => {
+                setUser(res.data);
+              })
+              .catch(err => console.log(err.response));
+          }
 
+    })(MessageForm);
 
-    
-     (MessageForm);
     export default FormikMessageForm;

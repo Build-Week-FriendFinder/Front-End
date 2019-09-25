@@ -1,4 +1,102 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ENTIRE HEADER */
 .HeaderContainer{
     /* display: flex; */
@@ -12,7 +110,7 @@
   margin: 0 5% 0 5%;
   display: flex;
   justify-content: center;
-  border: 2px solid black;
+ 
   
 }
 
@@ -20,9 +118,10 @@
 .Title{
   display: flex;
   justify-content: flex-start;
+  
   padding: 5px 0 0 0; 
   color: white;
-  border: 2px solid red;
+  
 }
 
 
@@ -31,7 +130,7 @@
 /* RIGHT - group of nav buttons */
 .NavItems{
  padding: 35px 0 0 0; 
- border: 2px solid red;
+ 
  
 }
 

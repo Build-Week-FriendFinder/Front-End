@@ -4,8 +4,7 @@
 .Message-Container{
   display: flex;
   justify-content: center;
-  width: 90%;
- 
+  width: 100%;
 }
 
 
@@ -20,7 +19,6 @@
   }
 
 
-
 /* Friend List profile image scroll bar */
   .friend-List {
     margin: 0 0 5% 20%;
@@ -32,6 +30,7 @@
     overflow: scroll;
     background: lightgray;
   }
+
 
   /* PROFILE IMAGE HOLDER */
   .imageholder{
@@ -46,25 +45,36 @@
 
   .MessageBox{
     
-    border: 2px solid green; 
+    
     width: 500px;
   }
 
   .MessageBoxTop{
     display: flex;
-    border: 2px solid red;
     height: 300px; 
   }
 
-  .Messagebox2{
+  .formholder{
+    width: 500px;
+    margin-left: 2%;
+    padding-bottom: 15px;
     display: flex;
     flex-direction: column-reverse;
-    border: 2px solid black;
+    background: #afd9ff;
+    border-radius: 5px;
   }
+
+
+
 
 
 
   /* BUTTON */
+.btn-holder{
+display: flex;
+justify-content: flex-end; 
+}
+
 
   .Btn{
     
@@ -77,17 +87,32 @@
     color:  white;
     width: 150px;
     height: 50px;
+  }
+
+  .Btn2{
     
-    
+    padding: 5px 10px 5px 10px;
+    margin: 25px 15px 0 15px; 
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    background: #0085FF;
+    color:  white;
+    width: 120px;
+    height: 50px;
   }
 
 
+
+
+
   /* Friend selected Image for message*/
-  .MessageUserImg{
+  .UserImg{
    
     background: lightgray;
     width: 150px;
     height: 150px;
     border-radius: 5px;
+    
   }
 

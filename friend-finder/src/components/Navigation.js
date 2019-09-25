@@ -1,3 +1,102 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Ben Solt Code
 import React, { useState } from 'react'
 import { Dropdown } from 'semantic-ui-react'
@@ -44,11 +143,16 @@ return (
 
 <div className="HeaderBanner">
 
+<div className="test">
+</div>
+
+
 <div className="Title">
 
 <h1>{headerText}</h1>
 
 </div>
+
 
 <nav className="NavItems">
     
