@@ -1,7 +1,5 @@
 //Ben Solt Code
 import React, { useState } from 'react'
-import { Dropdown } from 'semantic-ui-react'
-import React from "react";
 import { Dropdown } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
@@ -66,18 +64,19 @@ return (
 </div>
 
 </div>
-/* //   <Dropdown text='Menu'>
-//     <Dropdown.Menu>
-//       <Dropdown.Item text='HOME' />
-//       <Dropdown.Divider />
-//       <Dropdown.Item text='FRIENDS'/>
-//       <Dropdown.Divider />
-//       <Dropdown.Item text='MESSAGES'/>
-//       <Dropdown.Divider />
-//       <Dropdown.Item text='LOG OUT' />
-//       <Dropdown.Divider />
-//     </Dropdown.Menu>
-//   </Dropdown> */
+
+  //  <Dropdown text='Menu'>
+  //    <Dropdown.Menu>
+  //      <Dropdown.Item text='HOME' />
+  //      <Dropdown.Divider />
+  //      <Dropdown.Item text='FRIENDS'/>
+  //      <Dropdown.Divider />
+  //      <Dropdown.Item text='MESSAGES'/>
+  //      <Dropdown.Divider />
+  //      <Dropdown.Item text='LOG OUT' />
+  //      <Dropdown.Divider />
+  //    </Dropdown.Menu>
+  //  </Dropdown> 
 
   
 
