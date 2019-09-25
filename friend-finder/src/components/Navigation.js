@@ -16,19 +16,26 @@ const Navigation = () => {
 
 
   
-    const [headerText, setHeaderText] = useState("HOME")
+    const [headerText, setHeaderText] = useState("FIND FRIENDS")
 
     const TextHome = (e, str) => {
        setHeaderText('HOME')
     }
     const TextFriends = (e, str) => {
-        setHeaderText('FRIENDS')
+        setHeaderText('FIND FRIENDS')
      }
+
+     const TextRequests = (e, str) => {
+      setHeaderText('FRIEND REQUESTS')
+   }
+
     const TextMessages = (e, str) => {
         setHeaderText('MESSAGES')
      }
     
-   
+     const TextProfile = (e, str) => {
+      setHeaderText('EDIT PROFILE')
+   }
 
 return (
 
@@ -47,17 +54,19 @@ return (
 
 <div className="Title">
 
-<h1>{headerText}</h1>
+<h3>{headerText}</h3>
 
 </div>
 
 
 <nav className="NavItems">
     
-<NavLink onClick={TextHome} className="navlink" exact activeClassName="activeLink" to="/">Home</NavLink>
-<NavLink onClick={TextFriends} className="navlink" exact activeClassName="activeLink" to="/friends">Friends</NavLink>
+<NavLink onClick={TextFriends} className="navlink" exact activeClassName="activeLink" to="/">Find Friends</NavLink>
+<NavLink onClick={TextRequests} className="navlink" exact activeClassName="activeLink" to="/friendrequest">Friend Requests</NavLink>
 <NavLink onClick={TextMessages} className="navlink" exact activeClassName="activeLink" to="/messages">Messages</NavLink>
+<NavLink onClick={TextProfile} className="navlink" exact activeClassName="activeLink" to="/editprofile">Edit Profile</NavLink>
 <NavLink className="navlink" exact activeClassName="activeLink" to="/logout">Log Out</NavLink>
+
 
 </nav>
 
