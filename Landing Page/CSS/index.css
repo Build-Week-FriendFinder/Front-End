@@ -11,6 +11,7 @@ nav {
     height: 65px;
     margin-bottom: 50px;
     margin-top: 50px;
+    padding-right: 7%;
 }
 
 nav a {
@@ -26,7 +27,7 @@ nav a {
 }
 
 nav h1 {
-    padding-right: 12%;
+    padding-right: 10%;
     font-size: 50px;
     color: white;
     margin-top: 5px;
@@ -141,6 +142,10 @@ body {
 
 @media screen and (max-width: 800px) {
     
+    header {
+        margin-left: 3%;
+    }
+
     header nav {
         flex-direction: column;
         height: 100%;
@@ -184,4 +189,66 @@ body {
     .Mission {
         display: none;
     }
+
+    .SignUp {
+        width: 35%;
+        margin-left: 32%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .FootNav nav {
+        background: none;
+        width: 100%;
+    }
+
+    .FootNav nav a {
+        margin-right: 15px;
+        background: #0085FF;
+        color: white;
+    }
+
+    .FootNav nav a:hover {
+        transition: 1.0s;
+        background: none;
+        color: #0085FF;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    header {
+        margin-left: 5%;
+    }
+
+    .SignUp {
+        width: 35%;
+        margin-left: 32%;
+    }
+
+    .SignUp h1 {
+        font-size: 1rem;
+    }
+
+    footer nav {
+        flex-direction: column;
+        height: 100%;
+        width: 25%;
+        margin-left: 10%;
+        margin-bottom: 0px;
+    }
+
+    footer nav a {
+        text-align: center;
+        width: 35%;
+        margin-left: 28%;
+    }
+
+    header nav h1 {
+        font-size: 1.5rem;
+        padding-left: 20%;
+    }
+
 }
