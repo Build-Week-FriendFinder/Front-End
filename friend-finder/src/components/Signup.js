@@ -1,13 +1,15 @@
 // Kelly Code
 
 import React, {useState, useEffect, useContext} from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import ReactDOM from 'react-dom';
+import DatePicker from "react-datepicker";
+
 
 
 
 // components
-import Navigation from './Navigation.js';
+import '../CSS/Signup.css';
 import UserContext from '../contexts/UserContext.js';
 
 
@@ -21,7 +23,8 @@ const Signup = () => {
     const [ newUser, setNewUser ] = useState({		
 		name: '',
 		email: '',
-		password: '',
+        password: '',
+        bday: ''
 	
 	});
 
@@ -34,15 +37,15 @@ const Signup = () => {
 
     const handleSubmit = e => {
 		e.preventDefault();
-		// axios
-		// 	.post('', newUser)
-		// 	.then(res => {
-		// 		console.log(res);
-		// 		localStorage.setItem('token', res.data.token);
-		// 		const id = res.data.id;
+		axios
+			.post('', newUser)
+			.then(res => {
+				console.log(res);
+				localStorage.setItem('token', res.data.token);
+				const id = res.data.id;
 				
-		// 	})
-		// 	.catch(err => console.log('error in signup', err));
+			})
+			.catch(err => console.log('error in signup', err));
 	};
 
 	// useEffect(
@@ -54,13 +57,17 @@ const Signup = () => {
     
 
     
-
+    const [startDate, setStartDate] = useState(new Date());
 
     return (
+
+        
         <>
-        <Navigation />
+        
 
             <form onSubmit={handleSubmit}>
+
+                
                 <input  type="text"
                         name="name"
                         placeholder="Name"
@@ -77,12 +84,19 @@ const Signup = () => {
 
                 <input  type="password"
                         name="password"
-                        placeholder="PassWord"
+                        placeholder="Password"
                         onChange={handleChange}
                         value={newUser.password}
                          />
+                         
+                <label>Date of Birth</label><br/>
+                <br/>
+                <DatePicker selected={startDate} onChange={date => setStartDate(date)} />
 
-                 <button type="submit">Submit</button>               
+              
+
+                 <button type="submit">Submit</button> 
+
             </form>
         </>
     )
