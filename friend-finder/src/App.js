@@ -15,12 +15,15 @@ import './CSS/Messages.css';
 // Kelly Components
 // import Signup from './components/Signup.js';
  import Survey from './components/Survey.js';
+import Login from './components/Login';
 
 // Ben Components
 import Home from './components/home/Home.js';
 import Messages from './components/messages/Messages';
 
 
+//John
+import FoundFriends from './components/FoundFriends';
 
 function App() {
 
@@ -33,13 +36,15 @@ function App() {
       <div className="App">
         
         <Navigation/>
-        
-          <Route exact path="/" component={Home}/>  
+                                    {/* {FoundFriends} is new Home */}
+          {/* <Route exact path="/" component={FoundFriends}/>   */}
           <Route exact path="/messages" component={Messages}/>
-          {/* <Route exact path="/signup" component={Signup} /> */}
+          {/* <Route exact path="/signup" component={Signup} />  */}
           <Route exact path="/survey" component={Survey} />     
-        
-  
+          <Route exact path="/login" component={Login} /> 
+          <Route exact path="/editprofile" component={Home} /> 
+          {/* Home is the User - edit Profile page */}
+          {/* <Route exact path="/friendrequest" component={Friends}/> */}
       </div>
 
   )}

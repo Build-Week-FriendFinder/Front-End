@@ -11,6 +11,7 @@ const Friends = props => {
   useEffect(() => {
     //replace with a request to the api
     setFriends(mutualFriends);
+    
   }, []);
 
   const acceptFriend = () => {
