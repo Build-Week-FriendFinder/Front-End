@@ -1,4 +1,4 @@
-
+/* 
 .NavBanner{
     width: 100%;
     height: 100px;
@@ -7,9 +7,10 @@
 
 
 .navlink{
-    color:  #0085FF;
+    background:  #fff;
+    color:#0085FF;
     border: 2px solid black;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
     margin: 0 25px 25px 25px; 
     border-radius: 5px;
     font-size: 1.5rem;
@@ -20,4 +21,44 @@
    
     background: rgb(0, 187, 250);
     color: white;
-  }
+  } */
+
+  
+.NavBanner{
+  /* width: 100%; */
+  display:flex;
+  justify-content: space-between;
+  /* height: 100px; */
+  padding:20px;
+  background: #0085FF;
+}
+
+
+.navlink{
+  background:  #fff;
+  color:#0085FF;
+  /* border: 2px solid black; */
+  padding: 3px 5px;
+  margin-left:25px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav-title {
+  text-transform: uppercase;
+  font-size:1.5em;
+  color:#fff;
+  font-weight:bold;
+}
+
+.nav-active {
+  border:2px solid black;
+}
+
+.navlink:hover{
+ 
+  background: rgb(0, 187, 250);
+  color: white;
+}
+
