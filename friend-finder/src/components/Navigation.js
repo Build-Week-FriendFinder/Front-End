@@ -1,33 +1,72 @@
 //Ben Solt Code
+import React, { useState } from 'react'
+import { Dropdown } from 'semantic-ui-react'
 import React from "react";
 import { Dropdown } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
+
+
 // import './Navigation.css';
 
-// TODO: This is missing functionality for sub-menu here from SUI core examples.
-// The "Publish To Web" item should contain a sub-menu.
+
+
+
 
 //here
 const Navigation = () => {
 
 
+  
+    const [headerText, setHeaderText] = useState("HOME")
+
+    const TextHome = (e, str) => {
+       setHeaderText('HOME')
+    }
+    const TextFriends = (e, str) => {
+        setHeaderText('FRIENDS')
+     }
+    const TextMessages = (e, str) => {
+        setHeaderText('MESSAGES')
+     }
+    
+   
+
 return (
 
-<div className="NavBanner">
+<div className="HeaderContainer">
+
+
+
+<div className="HeaderBanner">
+
+
+{/* //////////////////////////////////</div> */}
+{/* <div className="NavBanner">
+
+<nav className="NavItems"> */}
+
+
+<div className="Title">
+
+<h1>{headerText}</h1>
+
+</div>
+
 
 <nav className="NavItems">
-
-<NavLink className="navlink" to="/">Home</NavLink>
-<NavLink className="navlink" to="/friends">Friends</NavLink>
-<NavLink className="navlink" to="/messages">Messages</NavLink>
-<NavLink className="navlink" to="/logout">Log Out</NavLink>
+    
+<NavLink onClick={TextHome} className="navlink" exact activeClassName="activeLink" to="/">Home</NavLink>
+<NavLink onClick={TextFriends} className="navlink" exact activeClassName="activeLink" to="/friends">Friends</NavLink>
+<NavLink onClick={TextMessages} className="navlink" exact activeClassName="activeLink" to="/messages">Messages</NavLink>
+<NavLink className="navlink" exact activeClassName="activeLink" to="/logout">Log Out</NavLink>
 
 </nav>
 
 </div>
 
-//   <Dropdown text='Menu'>
+</div>
+/* //   <Dropdown text='Menu'>
 //     <Dropdown.Menu>
 //       <Dropdown.Item text='HOME' />
 //       <Dropdown.Divider />
@@ -38,12 +77,11 @@ return (
 //       <Dropdown.Item text='LOG OUT' />
 //       <Dropdown.Divider />
 //     </Dropdown.Menu>
-//   </Dropdown>
+//   </Dropdown> */
 
   
-)
-}
-export default Navigation;
+
+/* export default Navigation;
 //here
 const Navigation = ({navTitle}) => {
     navTitle =  navTitle ? navTitle : "";
@@ -64,20 +102,9 @@ const Navigation = ({navTitle}) => {
           Log Out
         </NavLink>
       </div>
-    </nav>
+    </nav> */
 
-    //   <Dropdown text='Menu'>
-    //     <Dropdown.Menu>
-    //       <Dropdown.Item text='HOME' />
-    //       <Dropdown.Divider />
-    //       <Dropdown.Item text='FRIENDS'/>
-    //       <Dropdown.Divider />
-    //       <Dropdown.Item text='MESSAGES'/>
-    //       <Dropdown.Divider />
-    //       <Dropdown.Item text='LOG OUT' />
-    //       <Dropdown.Divider />
-    //     </Dropdown.Menu>
-    //   </Dropdown>
+   
   );
 };
 export default Navigation;

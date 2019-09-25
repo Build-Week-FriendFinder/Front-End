@@ -1,13 +1,125 @@
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Kelly code */
+
+
+form {
+    margin-top: 115px;
+=======
 /* Kelly code */
 
 form {
     
+>>>>>>> 57544f95c84b694c71bef889b0069577cc51fb5d
 	border: 2px solid #e3e1e1;
 	border-radius: 5px;
 	box-shadow: 5px 5px 8px #bfbfbf;
 	width: 400px;
 	align-items: center;
 	height: auto;
+<<<<<<< HEAD
+	display: flex;
+	justify-content: center;
+	background: #3d4d41;
+=======
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -42,4 +154,5 @@ input {
 .bio {
     padding: 10rem;
     color: red;
+>>>>>>> 57544f95c84b694c71bef889b0069577cc51fb5d
 }
