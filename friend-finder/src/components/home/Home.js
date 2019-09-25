@@ -4,14 +4,19 @@ import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
 import './home.css';
 
-const HomeForm = ({status, touched, errors}) => {
+const HomeForm = ({status, touched, errors, setCurrentNavTitle,match}) => {
     const [user, setUser] = useState([]);
-console.log("is touched", touched);
+
   useEffect(() => {
     if (status) {
       setUser([...user, status]);
     }
   }, [status]);
+
+  useEffect(() => {
+    const componentTitle = "User Profile";
+    setCurrentNavTitle(componentTitle);
+  }, [match.url]);
 
   return (
     <div className="user-profile">
