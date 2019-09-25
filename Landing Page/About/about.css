@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Reset above,  CSS below */
+html,
+body,
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #0085FF
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    background: #0085FF;
+    align-content: center;
+    height: 65px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-right: 7%;
+}
+
+nav a {
+    padding: 1% 2.5%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    color: #0085FF;
+    text-decoration: none;
+    border-radius: 8px;
+    height: 17px;
+}
+
+nav h1 {
+    padding-right: 10%;
+    font-size: 50px;
+    color: white;
+    margin-top: 5px;
+}
+
+a:hover {
+    background: #0085FF;
+    color: white;
+    transition: 1.0s;
+}
+
+/* a {
+    text-decoration: none;
+
+} */
+
+section {
+    padding: 10rem 0;
+
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    color: #FFF;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    border-radius: 5px;
+    box-shadow: 0 1px 6px -2px #000;
+    background-color: #FFF;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 3px;
+    margin-right: 20px;
+
+}
+
+.profileCon {
+    display: flex;
+    flex-direction: column;
+}
+
+.card h1 {
+    font-size: 3.4rem;
+    margin-left: 20px;
+}
+
+.job-title {
+    font-size: 2rem;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    color: #777;
+    font-weight: 600;
+}
+
+.about {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 3px;
+    margin-left: 20px;
+    color: #333;
+}
+
+/* @media screen and (max-width: 800px) {
+    font-size: 2.5rem;
+} */
+
+.btn {
+    text-decoration: none;
+    color: #FFF;
+    background: #445ea3;
+    margin-left: 35%;
+    width: 60px;
+    margin-bottom: 20px;
+    height: 20px;
+    border-radius: 2rem;
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 15px;
+}
+
+.social-media {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0.1);
+}
+
+.social-media i {
+    font-size: 3rem;
+}
+
+.fa-facebook-square {
+    color: #3b5999;
+}
+
+.fa-instagram {
+    color: #e6683c;
+}
+
+.fa-twitter-square {
+    color: #55acee;
+}
+
+.fa-google-plus-square {
+    color: #dd4b39;
+}
