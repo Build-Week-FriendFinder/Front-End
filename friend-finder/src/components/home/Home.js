@@ -1,4 +1,4 @@
-
+// Ben Solt Code
 import React, { useState, useEffect } from "react";
 import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
@@ -13,18 +13,20 @@ const HomeForm = ({status, touched, errors, setCurrentNavTitle,match}) => {
     }
   }, [status]);
 
-  useEffect(() => {
-    const componentTitle = "User Profile";
-    setCurrentNavTitle(componentTitle);
-  }, [match.url]);
+  // useEffect(() => {
+  //   const componentTitle = "User Profile";
+  //   setCurrentNavTitle(componentTitle);
+  // }, [match.url]);
 
   return (
     <div className="user-profile">
       <div className="user-form">
+
         {/* user photo */}
         <div className="user-photo">
           <input type="file" />
-        </div>
+        </div> 
+      
       
         <Form>
         
@@ -40,7 +42,7 @@ const HomeForm = ({status, touched, errors, setCurrentNavTitle,match}) => {
 
         {/*  DOBIRTH */}
           <div>
-          <Field type="text" name="date" placeholder="Enter Dateadfasdf" />
+          <Field type="text" name="date" placeholder="Enter Date" />
           </div>
           {touched.date && errors.date && (
             <p className="error">{errors.date}</p>
@@ -77,6 +79,8 @@ const HomeForm = ({status, touched, errors, setCurrentNavTitle,match}) => {
 
 
         </Form>
+        
+
         </div>
 
         </div>
@@ -105,7 +109,7 @@ const HomeForm = ({status, touched, errors, setCurrentNavTitle,match}) => {
                 location: Yup.string().required('Enter a location!'),
                 movie: Yup.string() .required('Enter a movie!'),
                 book: Yup.string() .required('Enter a book!'),
-                music: Yup.string() .required('Enter a music!'),
+                music: Yup.string() .required('Enter music!'),
 
 
               }),
