@@ -1,105 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Ben Solt Code
 import React, { useState } from 'react'
 import { Dropdown } from 'semantic-ui-react'
+import React from "react";
+import { Dropdown } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 
@@ -110,17 +13,11 @@ import { NavLink } from "react-router-dom";
 
 
 
+//here
 const Navigation = () => {
 
 
-    // const HomeHeader = () => {
-    //     var x = document.getElementById("h");
-    //     if (x.innerHTML === "HOME") {
-    //         x.innerHTML = "H";
-    //     }else{
-    //         x.innerHTML = "HOME";
-    //     }
-    // }
+  
     const [headerText, setHeaderText] = useState("HOME")
 
     const TextHome = (e, str) => {
@@ -143,8 +40,11 @@ return (
 
 <div className="HeaderBanner">
 
-<div className="test">
-</div>
+
+{/* //////////////////////////////////</div> */}
+{/* <div className="NavBanner">
+
+<nav className="NavItems"> */}
 
 
 <div className="Title">
@@ -166,7 +66,46 @@ return (
 </div>
 
 </div>
+/* //   <Dropdown text='Menu'>
+//     <Dropdown.Menu>
+//       <Dropdown.Item text='HOME' />
+//       <Dropdown.Divider />
+//       <Dropdown.Item text='FRIENDS'/>
+//       <Dropdown.Divider />
+//       <Dropdown.Item text='MESSAGES'/>
+//       <Dropdown.Divider />
+//       <Dropdown.Item text='LOG OUT' />
+//       <Dropdown.Divider />
+//     </Dropdown.Menu>
+//   </Dropdown> */
 
-)
-}
+  
+
+/* export default Navigation;
+//here
+const Navigation = ({navTitle}) => {
+    navTitle =  navTitle ? navTitle : "";
+  return (
+    <nav className="NavBanner">
+      <div className="nav-title">{navTitle}</div>
+      <div>
+        <NavLink exact  activeClassName="nav-active" className="navlink" to="/">
+          Home
+        </NavLink>
+        <NavLink activeClassName="nav-active" className="navlink" to="/friends">
+          Friends
+        </NavLink>
+        <NavLink activeClassName="nav-active" className="navlink" to="/messages">
+          Messages
+        </NavLink>
+        <NavLink activeClassName="nav-active" className="navlink" to="/logout">
+          Log Out
+        </NavLink>
+      </div>
+    </nav> */
+
+   
+  );
+};
 export default Navigation;
+
