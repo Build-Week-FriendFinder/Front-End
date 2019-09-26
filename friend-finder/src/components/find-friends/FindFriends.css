@@ -6,14 +6,14 @@
 
 .container {
   width: 620px;
-  margin-top: 10px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .image-container {
   width: 300px;
-  height: 300px;
+  height: 200px;
   /* border: 1px solid rgb(0, 187, 250); */
 }
 
@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: center;
   width: 300px;
-  height: 300px;
+  height: 200px;
   /* border: 1px solid rgb(0, 187, 250); */
 }
 
