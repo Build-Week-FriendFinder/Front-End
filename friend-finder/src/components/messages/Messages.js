@@ -1,142 +1,108 @@
 // Ben Solt
 import React, { useState, useEffect } from "react";
-import { Form, Field, withFormik } from "formik";
+
 import * as Yup from "yup";
 import axios from "axios";
 
+import MessageForm from './MessageForm'
+
+ // LIST OF FRIENDS
+
+  
+
+// GET FRIENDS - display list of friends on left in scroll bar.
+
+export default function Messages() {
+
+  const [friendName, setFriendName] = useState([])
+  const user_id = 1;
 
 
+useEffect(() => {
+  // e.preventDefault();
+  axios
+    .get(`https://friend-finder-levi.herokuapp.com/api/friends/${user_id}`)
+    .then(res => {
+      setFriendName(res.data);
+    })
+    .catch(err => console.log(err.response));
+}, [])
 
-const MessageForm = ({status, touched, errors}) => {
-    const [user, setUser] = useState([]);
-console.log("is touched", touched);
-  useEffect(() => {
-    if (status) {
-      setUser([...user, status]);
-    }
-  }, [status]);
+if (friends.id === 0) {
+return(
+  <div> <h4>You need to add Friends</h4> </div>
+)
+}
 
- 
 
 
   return (
-
-
+    
     <div className="Message-Container">
 
-        <div className="friend-List-container">
-            <h2>FRIENDS</h2>
+    <div className="friend-List-container">
+    <h2>FRIENDS</h2>
 
-            <div className="friend-List">
-            <h4>friend 1</h4>
-            <h4>friend 2</h4>
-            <h4>friend 3</h4>
-            <h4>friend 4</h4>
-            <div className="imageholder">
-            <img src="image"></img>
-            </div>
-            
-            <div className="imageholder">
-            <img src="image"></img>
-            </div>
+    <div>
+        {friendName.name.length >= 1
+          ? friendName.name.map((user1, index) => {
+              return (
+              <div className="friend-List">
+              <h4>{user1}  key={index}</h4>
+              </div>
+                 
+              );
+            })
+          : () => {
+              return <div></div>;
+            }}
+      </div>
+      <MessageForm/>
 
-            </div>
+  </div>
 
-        
-
-        </div>
-
+    {/* <h4>I{friendName}I</h4>
+    <h4>{friendName}</h4>
+    <h4>{friendName}</h4>
+    <h4>{friendName}</h4>  */}
    
-        <div className="MessageBox">
-       
-        <div className="MessageBoxTop">
-          
-          <div className="ProfileBox">
-            
-            <div className="UserImg">
+    {/* <div className="imageholder">
+    <img src="image"></img>
+    </div> */}   
 
-              <img src="image"></img>
-
-            </div>
-
-              <h4>User Name</h4>
-
-              <button type="submit" className="Btn2">Remove Friend</button> 
-
-          </div>
-        
-         
-
-  
-    <div className="formholder">
- 
-
-        <Form>
-
-            Send Message: 
-            <Field type="text" name="message" placeholder="Enter Message" />
-            {/* {touched.message && errors.message && (
-            <p className="error">{errors.message}</p>
-            )} */}
-
-        </Form>
-
-        {/* USER MESSAGE DISPLAYED ON SCREEN */}
-            <div>
-
-              {user.map(person => (
-
-                <li>{person.message}</li>
-
-              ))}
-             
-            </div>
-
-        </div> 
-        {/* END Formholder*/}
-
-    </div>   
-          
-          <div className="btn-holder">
-          <button type="submit" className="Btn">Send Message</button> 
-             
-          </div>
-            
-        
-        </div>
-
-        </div>
-        // END Message Container
+</div>
 
 
-      );
-    }
-        const FormikMessageForm = withFormik({
+)}
 
-            mapPropsToValues({message}){
+      
+    
+    // DELETE FRIEND
 
-                return {
-                
-                  message: message || ""
-               
-                };
-              },
-        
-
-        // validationSchema: Yup.object().shape({
-        // message: Yup.string().required("You silly!!!"),
-        // }),
+        // useEffect(user, { setUser}) => {
+        // e.preventDefault();
+        //   axios
+        //     .delete('https://friend-finder-levi.herokuapp.com/api/friend/user_id')
+        //     .then(res => {
+        //       setUser(res.data);
+        //     })
+        //     .catch(err => console.log(err.response));
+        // }
 
 
-        handleSubmit(user, { setUser}) {
-            axios
-              .post("", user)
-              .then(res => {
-                setUser(res.data);
-              })
-              .catch(err => console.log(err.response));
-          }
 
-    })(MessageForm);
 
-    export default FormikMessageForm;
+
+// .post = MESSAGE friend
+
+        // handleSubmit(e, user, { setUser}) {
+        //     e.preventDefault();
+        //     const user_id = 1;
+        //     axios
+        //       .get(`https://friend-finder-levi.herokuapp.com/api/friends/${user_id}`)
+        //       //.post("https://friend-finder-levi.herokuapp.com/api/messages/user_id/:friend_id", user)
+        //       .then(res => {
+        //         setUser(res.data);
+        //       })
+        //       .catch(err => console.log(err.response));
+        //   }
