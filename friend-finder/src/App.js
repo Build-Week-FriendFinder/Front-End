@@ -23,7 +23,7 @@ import Messages from './components/messages/Messages';
 
 
 //John
-import FoundFriends from './components/FoundFriends';
+import FindFriends from './components/find-friends/FindFriends';
 
 function App() {
 
@@ -37,7 +37,7 @@ function App() {
         
         <Navigation/>
                                     {/* {FoundFriends} is new Home */}
-          {/* <Route exact path="/" component={FoundFriends}/>   */}
+          <Route exact path="/" component={FindFriends}/>
           <Route exact path="/messages" component={Messages}/>
           {/* <Route exact path="/signup" component={Signup} />  */}
           <Route exact path="/survey" component={Survey} />     

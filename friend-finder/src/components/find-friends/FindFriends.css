@@ -1,0 +1,49 @@
+.user-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  width: 620px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid rgb(0, 187, 250); */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid rgb(0, 187, 250); */
+}
+
+.user-info-container {
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid rgb(0, 187, 250); */
+}
+
+.interests-container {
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid rgb(0, 187, 250); */
+}
+
+button {
+  font-size: 1rem;
+  background: rgb(0, 187, 250);
+  width: 100px;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+  margin-left: 30%;
+}
