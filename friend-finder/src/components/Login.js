@@ -1,13 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 
 const Login = ({ history }) => {
-  const submitLogin = () => {
+  const [userCredentials, setCredentials] = useState({ 
+    email: '', 
+    password: ''
+  });
+
+  const { email, password } = userCredentials;
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    
+    // Destructure what you're passing in to match login info
+    // example: const login = ({ userSignIn }) =>
+    // userSignIn(email, password);
+
     history.push('/');
   }
 
+  const handleChange = event => {
+    const { value, name } = event.target;
+
+    setCredentials({...userCredentials, [name]: value });    
+  }
+
   return (
-    <button onClick={submitLogin}>Login</button>
+    <div className='login-info'>
+      <h2>I already have an account</h2>
+      <span>Sign in with your email and password</span>
+
+      <form onSubmit={handleSubmit}>
+        <input
+          name='email'
+          type='email'
+          value={email}
+          onChange={handleChange}
+          label='email'
+          required
+        />
+        <input
+          name='password'
+          type='password'
+          value={password}
+          onChange={handleChange}
+          label='password'
+          required
+        />
+
+        <input type='submit' value='Submit Form' />
+      </form>
+    </div>
   );
 }
 
