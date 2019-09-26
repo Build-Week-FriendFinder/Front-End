@@ -14,7 +14,7 @@
 .image-container {
   width: 300px;
   height: 300px;
-  border: 1px solid rgb(0, 187, 250);
+  /* border: 1px solid rgb(0, 187, 250); */
 }
 
 .button-container {
@@ -23,19 +23,19 @@
   justify-content: center;
   width: 300px;
   height: 300px;
-  border: 1px solid rgb(0, 187, 250);
+  /* border: 1px solid rgb(0, 187, 250); */
 }
 
 .user-info-container {
   width: 300px;
   height: 300px;
-  border: 1px solid rgb(0, 187, 250);
+  /* border: 1px solid rgb(0, 187, 250); */
 }
 
 .interests-container {
   width: 300px;
   height: 300px;
-  border: 1px solid rgb(0, 187, 250);
+  /* border: 1px solid rgb(0, 187, 250); */
 }
 
 button {
