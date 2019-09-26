@@ -18,8 +18,7 @@ useEffect(() => {
 
 return (
 
-<div className="Message-Container">
-  
+
 <div className="MessageBox">
        
        <div className="MessageBoxTop">
@@ -77,8 +76,6 @@ return (
            
        
        </div>
-
-</div>
 
 )}
 const FormikMessageForm = withFormik({

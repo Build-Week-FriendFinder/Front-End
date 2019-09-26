@@ -57,22 +57,22 @@ console.log('friendname array',friendName)
     
     </div>
 
+    </div>
     
-
-
-
-    
-      
       <MessageForm/>
 
-  
-     <h4>II</h4>
-      
+
    
     {/* <div className="imageholder">
     <img src="image"></img>
     </div>  */}
-</div>
+
+
+
+
+
+
+
 
 </div>
 
@@ -80,6 +80,12 @@ console.log('friendname array',friendName)
 )}
 
       
+
+
+
+
+
+
 
 
 
