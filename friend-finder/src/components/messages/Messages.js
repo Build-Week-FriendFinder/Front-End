@@ -28,47 +28,51 @@ useEffect(() => {
     .catch(err => console.log(err.response));
 }, [])
 
-if (friends.id === 0) {
-return(
-  <div> <h4>You need to add Friends</h4> </div>
-)
-}
+// if (friends.id === 0) {
+// return(
+//   <div> <h4>You need to add Friends</h4> </div>
+// )
+// }
 
 
-
+console.log('friendname array',friendName)
   return (
     
     <div className="Message-Container">
 
     <div className="friend-List-container">
     <h2>FRIENDS</h2>
-
-    <div>
-        {friendName.name.length >= 1
-          ? friendName.name.map((user1, index) => {
+    <div className="friend-List" >
+      
+    
+        {friendName.length >= 0
+          ? friendName.map((user1, index) => {
               return (
-              <div className="friend-List">
-              <h4>{user1}  key={index}</h4>
-              </div>
-                 
+             <h4 key={index}>{user1.name}</h4>
               );
             })
           : () => {
-              return <div></div>;
+              return 
             }}
-      </div>
+    
+    </div>
+
+    
+
+
+
+    
+      
       <MessageForm/>
 
-  </div>
-
-    {/* <h4>I{friendName}I</h4>
-    <h4>{friendName}</h4>
-    <h4>{friendName}</h4>
-    <h4>{friendName}</h4>  */}
+  
+     <h4>II</h4>
+      
    
     {/* <div className="imageholder">
     <img src="image"></img>
-    </div> */}   
+    </div>  */}
+</div>
 
 </div>
 
@@ -76,6 +80,9 @@ return(
 )}
 
       
+
+
+
     
     // DELETE FRIEND
 
