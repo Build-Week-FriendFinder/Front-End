@@ -32,7 +32,7 @@ const Survey = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        const thisUser = 6
+        const thisUser = 5
         axios
             .put(`https://friend-finder-levi.herokuapp.com/api/survey/${thisUser}`, newSurvey)
             .then(res => {

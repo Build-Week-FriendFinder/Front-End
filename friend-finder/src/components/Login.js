@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import axios from 'axios';
 
 const Login = ({ history }) => {
   const [userCredentials, setCredentials] = useState({ 
@@ -16,11 +17,27 @@ const Login = ({ history }) => {
     // example: const login = ({ userSignIn }) =>
     // userSignIn(email, password);
 
-    history.push('/findfriends');
-  }
+    axios
+    .post('https://friend-finder-levi.herokuapp.com/api/auth/login', userCredentials)
+    .then(res => {
+        console.log(res);
+        localStorage.setItem('token', res.data.token);   
+        history.push('/friendrequest');        
+        
+        
+        
+        
+    })
+    
+    .catch(err => console.log('error in signup', err));
+};
+
+    
+  
 
   const handleChange = event => {
     const { value, name } = event.target;
+    console.log(userCredentials);
 
     setCredentials({...userCredentials, [name]: value });    
   }
@@ -54,6 +71,6 @@ const Login = ({ history }) => {
       </form>
     </div>
   );
-}
+  }
 
 export default withRouter(Login);
