@@ -16,7 +16,7 @@ const Login = ({ history }) => {
     // example: const login = ({ userSignIn }) =>
     // userSignIn(email, password);
 
-    history.push('/');
+    history.push('/findfriends');
   }
 
   const handleChange = event => {
@@ -37,6 +37,7 @@ const Login = ({ history }) => {
           value={email}
           onChange={handleChange}
           label='email'
+          placeholder='Email'
           required
         />
         <input
@@ -45,6 +46,7 @@ const Login = ({ history }) => {
           value={password}
           onChange={handleChange}
           label='password'
+          placeholder='Password'
           required
         />
 
