@@ -37,6 +37,14 @@ const Navigation = () => {
       setHeaderText('EDIT PROFILE')
    }
 
+   const TextSignup = (e, str) => {
+     setHeaderText('SignUp')
+   }
+
+   const TextLogin = (e, str) => {
+    setHeaderText('Login')
+  }
+
 return (
 
 <div className="HeaderContainer">
@@ -60,8 +68,9 @@ return (
 
 
 <nav className="NavItems">
-    
-<NavLink onClick={TextFriends} className="navlink" exact activeClassName="activeLink" to="/">Find Friends</NavLink>
+<NavLink onClick={TextLogin} className="navlink" exact activeClassName="activeLink" to="/login">Login</NavLink>
+<NavLink onClick={TextSignup} className="navlink" exact activeClassName="activeLink" to="/signup">SignUp</NavLink>    
+<NavLink onClick={TextFriends} className="navlink" exact activeClassName="activeLink" to="/findfriends">Find Friends</NavLink>
 <NavLink onClick={TextRequests} className="navlink" exact activeClassName="activeLink" to="/friendrequest">Friend Requests</NavLink>
 <NavLink onClick={TextMessages} className="navlink" exact activeClassName="activeLink" to="/messages">Messages</NavLink>
 <NavLink onClick={TextProfile} className="navlink" exact activeClassName="activeLink" to="/editprofile">Edit Profile</NavLink>

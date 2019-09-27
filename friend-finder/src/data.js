@@ -1,13 +1,33 @@
 export default {
-	users: [
+	mutualFriends: [
 		{
             name: 'Kelly', 
-            email: 's@s.com',
-            password: '123',
+			bio: 'null',
+			gender: 'gender'
 
 	
 		},
-		
+		{
+            name: 'ROSS', 
+			bio: 'null',
+			gender: 'gender'
+
+	
+		},
+		{
+            name: 'JOEY', 
+			bio: 'null',
+			gender: 'gender'
+
+	
+		},
+		{
+            name: 'CHANDLER', 
+			bio: 'null',
+			gender: 'gender'
+
+	
+		},
 	
 	]
 };

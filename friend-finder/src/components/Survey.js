@@ -1,43 +1,56 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import '../CSS/Signup.css';
-
+import {axiosWithAuth} from '../utils/axiosWithAuth.js';
+import userContext from '../contexts/UserContext.js'
 
 
 
 
 const Survey = () => {
 
-
-    const [ newSurvey, setNewSurvey ] = useState({		
+    const [ newSurvey, setNewSurvey ] = useState({      
         gender: '',        
-        hobbies: '',
-        bio: ''
-	
-	});
+        // hobbies: '',
+        bio: '',
+        // name: 'test again',
+        // email: 'testing@email.com',
+        // password: '123',
+        // user_id: 6,
+        dob: null,
+        coordinates: null,
+        location: "test location",
+        profile_img: null   
+    });
+    
+   
 
     const handleChange = e => {
-		setNewSurvey({ ...newSurvey, [e.target.name]: e.target.value });
-		console.log('handleChange', e.target.name, e.target.value, newSurvey);
+        setNewSurvey({ ...newSurvey, [e.target.name]: e.target.value });
+        console.log('handleChange', e.target.name, e.target.value, newSurvey);
     };
 
     const handleSubmit = e => {
-		e.preventDefault();
-		axios
-			.post('', newSurvey)
-			.then(res => {
-				console.log(res);
-				localStorage.setItem('token', res.data.token);
-				const id = res.data.id;
-				
-			})
-			.catch(err => console.log('error in survey', err));
-	};
-
+        e.preventDefault();
+        const thisUser = 6
+        axios
+            .put(`https://friend-finder-levi.herokuapp.com/api/survey/${thisUser}`, newSurvey)
+            .then(res => {
+                console.log(res);
+                localStorage.setItem('token', res.data.token);
+                // const user_id = res.data.user_id;
+                
+                
+            })
+            
+            .catch(err => console.log('error in survey', err));
+    };
 
     return (
 
         <div>
+
+            <h2>Welcome to Friend Finder! We'd love to learn more about you.</h2>
         
         <form onSubmit={handleSubmit}>
 
@@ -54,12 +67,12 @@ const Survey = () => {
                     <option value="gender">Other</option>
             </select>              
 
-                
-                <input  type= "text"
+                {/* add a btn under this input, and then click handler where its making a request to post */}
+                {/* <input  type= "text"
                         name="hobbies"
-                        placeholder="Hobbies: Swimmming, traveling, etc."
+                        placeholder="Hobbies: Swimming, traveling, yoga etc."
                         onChange={handleChange}
-                        value={newSurvey.hobbies} />
+                        value={newSurvey.hobbies} /> */}
 
                 
                 <input  type="text"
@@ -77,9 +90,7 @@ const Survey = () => {
 
    
 
-
 }
-
 
 
 export default Survey;

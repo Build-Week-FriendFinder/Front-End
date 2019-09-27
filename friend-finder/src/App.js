@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import PrivateRoute from './components/PrivateRoute.js';
 import { axiosWithAuth } from './utils/axiosWithAuth';
 import Navigation from "./components/Navigation.js";
-// import Friends from "./components/mutual/Friends";
+import Friends from "./components/mutual/Friends";
 
 
 // CSS
@@ -13,7 +13,7 @@ import './CSS/Navigation.css';
 import './CSS/Messages.css';
 
 // Kelly Components
-// import Signup from './components/Signup.js';
+import Signup from './components/Signup.js';
  import Survey from './components/Survey.js';
 import Login from './components/Login';
 
@@ -27,29 +27,50 @@ import FindFriends from './components/find-friends/FindFriends';
 
 function App() {
 
+  const [ user, setUser ] = useState(() => (localStorage.user ? JSON.parse(localStorage.user) : null));
+
+
+
+  const getUser = currentUser => {
+		setUser(currentUser);
+	};
+
+	useEffect(
+		() => {
+			user && localStorage.setItem('user', JSON.stringify(user));
+		},
+		[ user ]
+	);
+
+	console.log(user, 'I am the current user');
   
 
   return (
 
-  // <UserContext.Provider>
+  <UserContext.Provider value = {{getUser}}>
 
       <div className="App">
         
         <Navigation/>
-                                    {/* {FoundFriends} is new Home */}
-          <Route exact path="/" component={FindFriends}/>
-          <Route exact path="/messages" component={Messages}/>
-          {/* <Route exact path="/signup" component={Signup} />  */}
-          <Route exact path="/survey" component={Survey} />     
-          <Route exact path="/login" component={Login} /> 
+
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          {/* {FoundFriends} is new Home */}
+          <Route exact path="/findfriends" component={FindFriends}/>
+          <Route exact path="/messages" component={Messages}/>                      
           <Route exact path="/editprofile" component={Home} /> 
           {/* Home is the User - edit Profile page */}
-          {/* <Route exact path="/friendrequest" component={Friends}/> */}
+          <Route exact path="/friendrequest" component={Friends}/>
+
+          {/* Private Routes */}
+          <PrivateRoute path="/protected/survey/:user_id" component={Survey} />
       </div>
+
+    </UserContext.Provider>
 
   )}
 
-    /* </UserContext.Provider> */
+    
 
   //const [navTitle, setNavTitle] = useState("");
 
