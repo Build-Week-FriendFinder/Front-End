@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import User from './User';
-
+import {axiosWithAuth} from '../../utils/axiosWithAuth.js';
 import './FindFriends.css';
 
 const FindFriends = () => {
@@ -15,7 +15,7 @@ const FindFriends = () => {
 
   useEffect(() => {
     // console.log(props)
-    axios
+    axiosWithAuth()
       .get(`https://friend-finder-levi.herokuapp.com/api/user/`)
       .then(res => {
         console.log(res);
@@ -28,7 +28,7 @@ const FindFriends = () => {
 
   const request = () => {
     // request as friend
-    axios
+    axiosWithAuth()
       .post(`https://friend-finder-levi.herokuapp.com/api/swipe/${swiper_id}/${swiped_id}/request`)
       .then(res => {
         console.log(res)
@@ -40,7 +40,8 @@ const FindFriends = () => {
 
   const next = () => {
     // next profile
-    axios.get(`https://friend-finder-levi.herokuapp.com/api/user/${nextUser}`)
+    axiosWithAuth()
+    .get(`https://friend-finder-levi.herokuapp.com/api/user/${nextUser}`)
     .then(res => {
       console.log(res)
       setNextUser(nextUser + 1)
